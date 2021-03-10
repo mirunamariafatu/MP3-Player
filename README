@@ -1,0 +1,35 @@
+Fatu Miruna-Maria
+311CA
+
+Tema1 - MP3Player
+
+Functii - tema1.c
+
+- Functia createNode: creeaza nodul ce urmeaza sa fie adaugat in lista. Apoi se va crea calea catre fisierul binar din care vom extrage(cu fread) informatiile in noul nod, new
+
+- Functia addFirst/addLast: trateaza cazurile pentru adaugarea unui element intr-o lista goala si adaugarea primului(/ultimului) element intr-o lista care contine deja elemente
+
+-Functia addAfter: adauga melodia dupa cursor, iar daca cursorul se afla pe ultimul element, melodia va fi adaugata la sfarsit
+
+-Functia delFirst/delLast: trateaza stergerea dintr-o lista care contine un singur nod si stergerea dintr-o lista cu mai multe noduri, iar cursorul va fi mutat pe urmatoarea pozitie, respectiv pe pozitia anterioara(daca este posibil)
+
+-Fuctia delCurr: in cazul in care cursorul se afla pe prima/ultima pozitie, se vor apela delFirst/delLast. Altfel, se va sterge nodul curent din lista, mutand cursorul corespunzator
+
+- Functia delSong: se creeaza un nod t2 cu informatia melodiei din comanda, iar apoi se parcurge lista cu t1 pentru a verifica daca melodia (t2) exista in lista. Daca exista, aceasta va fi stearsa,iar daca melodia(t2) nu se afla in lista, se va afisa o eroare.
+
+-Functia check: functie ajutatoare folosita in cadrul comenzilor pentru a veifica daca o melodie exista in lista(in caz afirmativ, melodia este stearsa pentru a fi readaugata)
+
+-Functia freeList: elibereaza memoria in final
+
+Main - main.c
+
+ Se deschid fisierele in si out (primite in linia de comanda), in care urmeaza sa fie prelucrata informatia.
+ Se creeaza lista in care urmeaza sa fie inserate elementele.
+ Se citesc comenzile impreuna cu numele fisierelor binare din fisierul in.
+ In cadrul comenzilor ADD_FIRST/ADD_LAST/ADD_AFTER se creeaza noul nod(suport), se verifica daca acesta exista (check), iar apoi de apeleaza functia addFirst/addLast/addAfter. In cazul ADD_AFTER comanda va fi ignorata daca lista e goala sau daca cursorul se afla pe melodia respectiva.
+
+Feedback:
+
+ Consider ca a fost o tema utila pentru a ne fixa mai bine cunostintele despre Linked List, intrucat ne-a facut si o mica recapitulare din lucrul cu fisierele si siruri de caractere.
+
+
